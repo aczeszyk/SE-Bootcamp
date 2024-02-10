@@ -7,16 +7,16 @@ message = " Investment - to calculate the amount of interest you'll earn on your
 print(message)
 
 while True:
-    calculation = input(" \n Please choose Bond or Investment: ")
-    calculation = calculation.lower()
+    user_choice = input(" \n Please choose Bond or Investment: ")
+    user_choice = user_choice.lower()
 
-    if calculation == "bond" or calculation == "investment":
+    if user_choice == "bond" or user_choice == "investment":
         print(" Thank you.")
         break
     else:
         print(" \n Sorry, that's not right. Please type Bond or Investment: ")
 
-if calculation  == "bond" or calculation  == "investment":
+if user_choice  == "bond" or user_choice  == "investment":
     print(" Thank you.")
 else:
     print(" Sorry, that's not right. Please type either Bond or Investment. ")
@@ -28,7 +28,7 @@ else:
 # Ask user to choose simple or compoud interest.
 # Output the amount of money user will receive for either option.
 
-if calculation == "investment":
+if user_choice == "investment":
     deposit = float(input(" Please enter the amount of money you are depositing: "))
     interest_rate = float(input(" Please enter your interest rate (%): "))
     interest_rate = interest_rate / 100
@@ -50,7 +50,7 @@ if calculation == "investment":
 # Ask user to input number of months they plan to take to repay the bond.
 # Output how much money the user will have to pay each month.
 
-if calculation == "bond":
+if user_choice == "bond":
     house_value = float(input(" Please enter the current value of your house: "))
     rate_interest = float(input(" Please enter your interest rate (%): "))
     rate_interest = (rate_interest / 100) / 12
