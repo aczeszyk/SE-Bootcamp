@@ -6,8 +6,15 @@ import math
 message = " Investment - to calculate the amount of interest you'll earn on your investment. \n Bond - to calculate the amount you'll pay on a home loan. \n \n Enter either 'investment' or 'bond' from the menu above to proceed: "
 print(message)
 
-calculation = input(" \n Please choose Bond or Investment: ")
-calculation = calculation.lower()
+while True:
+    calculation = input(" \n Please choose Bond or Investment: ")
+    calculation = calculation.lower()
+
+    if calculation == "bond" or calculation == "investment":
+        print(" Thank you.")
+        break
+    else:
+        print(" \n Sorry, that's not right. Please type Bond or Investment: ")
 
 if calculation  == "bond" or calculation  == "investment":
     print(" Thank you.")
